@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter/material.dart';
 import 'package:islami_new/api_manager/api_manager.dart';
 
 class RadioProvider extends ChangeNotifier {
@@ -25,7 +25,7 @@ class RadioProvider extends ChangeNotifier {
 
     try {
       var data = await ApiManager.getRadios();
-      radios = data ?? [];
+      radios = data;
     } catch (e) {
       errorMessage = e.toString();
     } finally {

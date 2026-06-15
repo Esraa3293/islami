@@ -49,9 +49,12 @@ class _SettingsTabState extends State<SettingsTab> {
     );
   }
 
-  void showLanguageBottomSheet(){
-    showModalBottomSheet(context: context, builder: (context) {
-      return const LanguageBottomSheet();
-    },);
+  void showLanguageBottomSheet() {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) {
+        return const LanguageBottomSheet();
+      },
+    );
   }
 }

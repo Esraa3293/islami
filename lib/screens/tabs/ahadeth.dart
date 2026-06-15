@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:islami_new/models/hadeth_model.dart';
 import 'package:islami_new/providers/ahadeth_provider.dart';
 import 'package:islami_new/screens/hadeth_content.dart';
 import 'package:islami_new/screens/widgets/table_content.dart';

@@ -2,7 +2,8 @@
 
 class RadioResponse {
   RadioResponse({
-      this.radios,});
+    this.radios,
+  });
 
   RadioResponse.fromJson(dynamic json) {
     if (json['radios'] != null) {
@@ -12,6 +13,7 @@ class RadioResponse {
       });
     }
   }
+
   List<Radios>? radios;
 
   Map<String, dynamic> toJson() {
@@ -21,7 +23,6 @@ class RadioResponse {
     }
     return map;
   }
-
 }
 
 /// name : "---إذاعة صور من حياة الصحابة رضوان الله عليهم---"
@@ -29,13 +30,15 @@ class RadioResponse {
 
 class Radios {
   Radios({
-      this.name, 
-      this.radioUrl,});
+    this.name,
+    this.radioUrl,
+  });
 
   Radios.fromJson(dynamic json) {
     name = json['name'];
     radioUrl = json['radio_url'];
   }
+
   String? name;
   String? radioUrl;
 
@@ -45,5 +48,4 @@ class Radios {
     map['radio_url'] = radioUrl;
     return map;
   }
-
 }

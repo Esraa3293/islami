@@ -31,8 +31,10 @@ class AppBackground extends StatelessWidget {
           appBar: AppBar(
             title: Text(
               appBarTitle,
-              style:
-                  Theme.of(context).textTheme.bodyLarge?.copyWith(color: titleColor),
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyLarge
+                  ?.copyWith(color: titleColor),
             ),
             actions: actions,
           ),

@@ -150,7 +150,6 @@ class MyTheme {
       backgroundColor: darkPrimary,
       foregroundColor: blackColor,
     )),
-
     navigationBarTheme: NavigationBarThemeData(
         backgroundColor: darkSecondary,
         surfaceTintColor: Colors.transparent,

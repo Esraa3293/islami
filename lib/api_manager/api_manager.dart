@@ -15,7 +15,8 @@ class ApiManager {
   }
 
   static Future<SuraAudioResponse> getSuraAudio(int suraNumber) async {
-    Uri URL = Uri.https("api.alquran.cloud", "/v1/surah/$suraNumber/ar.alafasy");
+    Uri URL =
+        Uri.https("api.alquran.cloud", "/v1/surah/$suraNumber/ar.alafasy");
     Response response = await http.get(URL);
     var jsonResponse = jsonDecode(response.body);
     SuraAudioResponse suraAudioResponse =

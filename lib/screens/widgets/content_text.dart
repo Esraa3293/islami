@@ -12,7 +12,9 @@ class ContentText extends StatelessWidget {
       child: Text(
         text,
         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-            fontSize: 20, color: Theme.of(context).colorScheme.secondary, height: 1.5),
+            fontSize: 20,
+            color: Theme.of(context).colorScheme.secondary,
+            height: 1.5),
         textDirection: TextDirection.rtl,
       ),
     );

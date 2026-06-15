@@ -30,8 +30,8 @@ class SettingsItem extends StatelessWidget {
             child: Container(
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                  border: Border.all(
-                      color: Theme.of(context).colorScheme.primary),
+                  border:
+                      Border.all(color: Theme.of(context).colorScheme.primary),
                   borderRadius: BorderRadius.circular(15)),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),

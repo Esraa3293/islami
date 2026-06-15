@@ -7,14 +7,14 @@ class AhadethProvider extends ChangeNotifier {
 
   Future<void> loadAhadeth() async {
     String ahadethFile =
-    await rootBundle.loadString("assets/files/ahadeth.txt");
+        await rootBundle.loadString("assets/files/ahadeth.txt");
     List<String> ahadeth = ahadethFile.trim().split("#");
     List<HadethModel> localAhadeth = [];
     for (int i = 0; i < ahadeth.length; i++) {
       int lastLIndexOfFirstLine = ahadeth[i].trim().indexOf("\n");
       String title = ahadeth[i].trim().substring(0, lastLIndexOfFirstLine);
       String content =
-      ahadeth[i].trim().substring(lastLIndexOfFirstLine).trim();
+          ahadeth[i].trim().substring(lastLIndexOfFirstLine).trim();
       HadethModel hadethModel = HadethModel(title, content);
       localAhadeth.add(hadethModel);
     }

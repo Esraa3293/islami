@@ -6,6 +6,7 @@ import 'package:islami_new/screens/hadeth_content.dart';
 import 'package:islami_new/screens/home_screen.dart';
 import 'package:islami_new/screens/sura_content.dart';
 import 'package:provider/provider.dart';
+
 import 'l10n/app_localizations.dart';
 
 void main() {
