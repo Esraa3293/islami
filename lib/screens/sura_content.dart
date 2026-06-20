@@ -88,8 +88,9 @@ class SuraContent extends StatelessWidget {
                     child: Card(
                       child: ListView.separated(
                           padding: EdgeInsets.zero,
-                          itemBuilder: (context, index) =>
-                              ContentText(text: provider.verses[index]),
+                          itemBuilder: (context, index) => ContentText(
+                                text: provider.verses[index],
+                              ),
                           separatorBuilder: (context, index) => const Divider(
                                 indent: 40,
                                 endIndent: 40,

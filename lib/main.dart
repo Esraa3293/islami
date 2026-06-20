@@ -5,13 +5,17 @@ import 'package:islami_new/providers/settings_provider.dart';
 import 'package:islami_new/screens/hadeth_content.dart';
 import 'package:islami_new/screens/home_screen.dart';
 import 'package:islami_new/screens/sura_content.dart';
+import 'package:islami_new/shared_preferences.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'l10n/app_localizations.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedPrefs.prefs = await SharedPreferences.getInstance();
   runApp(ChangeNotifierProvider(
-    create: (context) => SettingsProvider(),
+    create: (context) => SettingsProvider()..init(),
     child: const MyApplication(),
   ));
 }
