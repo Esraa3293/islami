@@ -12,7 +12,7 @@ class SuraContentProvider extends ChangeNotifier {
   String? errorMessage;
 
   late AudioPlayer audioPlayer;
-  int currentAudioIndex = 0; // لمتابعة الآية الشغالة حالياً
+  int currentAudioIndex = 0; // لمتابعة الآية التي تعمل حالياً
   bool isPlayingAll = false; // لمعرفة هل المشغل يعمل الآن أم متوقف
 
   SuraContentProvider() {

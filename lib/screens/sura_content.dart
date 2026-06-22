@@ -43,42 +43,6 @@ class SuraContent extends StatelessWidget {
                     : Icons.play_circle_filled),
                 color: Theme.of(context).colorScheme.primary,
               )
-            // FutureBuilder(
-            //   future: suraAudioFuture,
-            //   // --- 3. استخدام المتغير الثابت لحل مشكلة علامة التحميل ---
-            //   builder: (context, snapshot) {
-            //     if (snapshot.connectionState == ConnectionState.waiting) {
-            //       return const Center(child: CircularProgressIndicator());
-            //     }
-            //     if (snapshot.hasError || snapshot.data == null) {
-            //       return const Icon(Icons.error_outline, color: Colors.red);
-            //     }
-            //
-            //     //حفظ قائمة الآيات من الـ API بمجرد اكتمال الـ Future بنجاح
-            //     var responseData = snapshot.data!.data?.ayahs;
-            //     if (responseData != null && apiAyahs.isEmpty) {
-            //       apiAyahs = responseData;
-            //     }
-            //     return IconButton(
-            //         onPressed: () async {
-            //           if (isPlayingAll) {
-            //             // إذا كان يشتغل واضغطنا مجدداً، نقوم بعمل إيقاف مؤقت
-            //             await audioPlayer.pause();
-            //             isPlayingAll = false;
-            //             setState(() {});
-            //           } else {
-            //             // بدء التشغيل المتتالي من أول آية أو من الآية المتوقفة عندها
-            //             playCurrentAyah();
-            //           }
-            //         },
-            //         icon: Icon(
-            //           isPlayingAll
-            //               ? Icons.pause_circle_filled
-            //               : Icons.play_circle_filled,
-            //           color: Theme.of(context).colorScheme.primary,
-            //         ));
-            //   },
-            // )
           ],
           body: provider.verses.isEmpty
               ? const Center(child: CircularProgressIndicator())
